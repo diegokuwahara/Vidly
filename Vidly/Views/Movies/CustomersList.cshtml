@@ -1,0 +1,20 @@
+﻿
+@model Vidly.ViewModels.CustomersListViewModel
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+<table>
+    <thead>
+        <tr style="font-weight:bold">Customer</tr>
+    </thead>
+    <tbody>
+         @foreach (var customer in Model.Customers)
+         {
+             <tr><td>@customer.Name</td></tr>
+         }
+    </tbody>
+</table>
+
