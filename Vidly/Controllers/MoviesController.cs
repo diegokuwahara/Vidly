@@ -16,8 +16,14 @@ namespace Vidly.Controllers
             var movie = new Movie() { Name = "xerek" };
             var customers = new List<Customer>
             {
-                new Customer { Name = "Customer 1"},
-                new Customer { Name = "Customer 2"}
+                new Customer {
+                                Name = "Customer 1",
+                                Id = 1
+                             },
+                new Customer {
+                                Name = "Customer 2",
+                                Id = 2
+                             }
             };
 
             var viewModel = new RandomMovieViewModel
@@ -30,25 +36,38 @@ namespace Vidly.Controllers
             return View(viewModel);
         }
 
-        public ActionResult CustomersList()
+        [Route("Movies")]
+        public ActionResult Movies()
         {
-            var customers = new List<Customer>
-            {
-                new Customer { Name = "John Smith" },
-                new Customer { Name = "Mary Williams"}
-            };
+            var movies = GetMovies();
+           
+            return View(movies);
+        }
 
-            var modelo = new CustomersListViewModel
-            {
-                Customers = customers
-            };
-            return View(modelo);
+        [Route("Movies/Details/{id:range(1,2)}")]
+        public ActionResult Details(int Id)
+        {
+            var movie = GetMovies().SingleOrDefault(c => c.Id == Id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            return View(movie);
         }
 
         [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(year + "/" + month);
+        }
+
+        private IEnumerable<Movie> GetMovies()
+        {
+            return new List<Movie>
+            {
+                new Movie { Id = 1, Name = "Shrek" },
+                new Movie { Id = 2, Name = "Wall-e" }
+            };
         }
     }
 }
