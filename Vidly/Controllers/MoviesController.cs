@@ -5,11 +5,19 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.ViewModels;
 using Vidly.Models;
+using Vidly.DatabaseResource;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+        private VidlYDbContext _context;
+
+        public MoviesController()
+        {
+            _context = new VidlYDbContext();
+        }
+
         // GET: Movies/Random
         public ActionResult Random()
         {
@@ -39,7 +47,7 @@ namespace Vidly.Controllers
         [Route("Movies")]
         public ActionResult Movies()
         {
-            var movies = GetMovies();
+            var movies = _context.Movies;
            
             return View(movies);
         }
@@ -47,7 +55,7 @@ namespace Vidly.Controllers
         [Route("Movies/Details/{id:range(1,2)}")]
         public ActionResult Details(int Id)
         {
-            var movie = GetMovies().SingleOrDefault(c => c.Id == Id);
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == Id);
 
             if (movie == null)
                 return HttpNotFound();
@@ -59,15 +67,6 @@ namespace Vidly.Controllers
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(year + "/" + month);
-        }
-
-        private IEnumerable<Movie> GetMovies()
-        {
-            return new List<Movie>
-            {
-                new Movie { Id = 1, Name = "Shrek" },
-                new Movie { Id = 2, Name = "Wall-e" }
-            };
         }
     }
 }

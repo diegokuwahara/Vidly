@@ -96,3 +96,12 @@ C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.csproj.CoreComp
 C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.dll
 C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.pdb
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\bin\EntityFramework.dll
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\bin\EntityFramework.SqlServer.dll
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\bin\EntityFramework.xml
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\bin\EntityFramework.SqlServer.xml
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.firstone.resources
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.inserts.resources
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddColuna.resources
