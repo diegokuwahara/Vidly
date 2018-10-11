@@ -103,3 +103,5 @@ C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\bin\EntityFramework.SqlServer.x
 C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.Initial.resources
 C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
 C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.inserts.resources
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.datanasc.resources
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.preencheNiver.resources

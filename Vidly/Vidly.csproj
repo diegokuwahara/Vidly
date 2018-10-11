@@ -168,6 +168,14 @@
     <Compile Include="Migrations\201810111444375_inserts.Designer.cs">
       <DependentUpon>201810111444375_inserts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810111632106_data nasc.cs" />
+    <Compile Include="Migrations\201810111632106_data nasc.Designer.cs">
+      <DependentUpon>201810111632106_data nasc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810111640434_preencheNiver.cs" />
+    <Compile Include="Migrations\201810111640434_preencheNiver.Designer.cs">
+      <DependentUpon>201810111640434_preencheNiver.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -247,6 +255,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810111444375_inserts.resx">
       <DependentUpon>201810111444375_inserts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810111632106_data nasc.resx">
+      <DependentUpon>201810111632106_data nasc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810111640434_preencheNiver.resx">
+      <DependentUpon>201810111640434_preencheNiver.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
