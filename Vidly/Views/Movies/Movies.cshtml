@@ -11,12 +11,18 @@
     {
         <table class="table table-bordered table-hover">
             <thead>
-                <tr style="font-weight:bold"><th scope="col">Movies</th></tr>
+                <tr style="font-weight:bold">
+                    <th scope="col">Movies</th>
+                    <th scope="col">Genre</th>
+                </tr>
             </thead>
             <tbody>
                 @foreach (var movie in Model)
                 {
-                    <tr><td scope="col">@Html.ActionLink(movie.Name, "Details", "Movies", new { Id = movie.Id }, null)</td></tr>
+                    <tr>
+                        <td scope="col">@Html.ActionLink(movie.Name, "Details", "Movies", new { Id = movie.Id }, null)</td>
+                        <td scope="col">@movie.Genre.Name</td>
+                    </tr>
                 }
             </tbody>
         </table>

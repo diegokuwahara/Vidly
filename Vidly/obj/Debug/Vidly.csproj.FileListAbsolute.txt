@@ -105,3 +105,4 @@ C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.csproj.Generate
 C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.inserts.resources
 C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.datanasc.resources
 C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.preencheNiver.resources
+C:\Users\diego.kuwahara\source\repos\Vidly\Vidly\obj\Debug\Vidly.Migrations.AdicionaGêneroeRegistros.resources

@@ -176,8 +176,13 @@
     <Compile Include="Migrations\201810111640434_preencheNiver.Designer.cs">
       <DependentUpon>201810111640434_preencheNiver.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810111708250_Adiciona Gênero e Registros.cs" />
+    <Compile Include="Migrations\201810111708250_Adiciona Gênero e Registros.Designer.cs">
+      <DependentUpon>201810111708250_Adiciona Gênero e Registros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -261,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810111640434_preencheNiver.resx">
       <DependentUpon>201810111640434_preencheNiver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810111708250_Adiciona Gênero e Registros.resx">
+      <DependentUpon>201810111708250_Adiciona Gênero e Registros.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

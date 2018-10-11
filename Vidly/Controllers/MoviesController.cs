@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.ViewModels;
@@ -47,7 +48,7 @@ namespace Vidly.Controllers
         [Route("Movies")]
         public ActionResult Movies()
         {
-            var movies = _context.Movies;
+            var movies = _context.Movies.Include(m => m.Genre).ToList();
            
             return View(movies);
         }
@@ -55,7 +56,7 @@ namespace Vidly.Controllers
         [Route("Movies/Details/{id:range(1,2)}")]
         public ActionResult Details(int Id)
         {
-            var movie = _context.Movies.SingleOrDefault(c => c.Id == Id);
+            var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(c => c.Id == Id);
 
             if (movie == null)
                 return HttpNotFound();
