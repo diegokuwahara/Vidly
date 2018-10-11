@@ -13,7 +13,7 @@ namespace Vidly.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201810101856461_inserts"; }
+            get { return "201810111444375_inserts"; }
         }
         
         string IMigrationMetadata.Source

@@ -160,21 +160,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810101854586_first one.cs" />
-    <Compile Include="Migrations\201810101854586_first one.Designer.cs">
-      <DependentUpon>201810101854586_first one.cs</DependentUpon>
+    <Compile Include="Migrations\201810111439099_Initial.cs" />
+    <Compile Include="Migrations\201810111439099_Initial.Designer.cs">
+      <DependentUpon>201810111439099_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810101856461_inserts.cs" />
-    <Compile Include="Migrations\201810101856461_inserts.Designer.cs">
-      <DependentUpon>201810101856461_inserts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810101949579_AddMembershipType.cs" />
-    <Compile Include="Migrations\201810101949579_AddMembershipType.Designer.cs">
-      <DependentUpon>201810101949579_AddMembershipType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810101959366_AddColuna.cs" />
-    <Compile Include="Migrations\201810101959366_AddColuna.Designer.cs">
-      <DependentUpon>201810101959366_AddColuna.cs</DependentUpon>
+    <Compile Include="Migrations\201810111444375_inserts.cs" />
+    <Compile Include="Migrations\201810111444375_inserts.Designer.cs">
+      <DependentUpon>201810111444375_inserts.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -250,17 +242,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810101854586_first one.resx">
-      <DependentUpon>201810101854586_first one.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810111439099_Initial.resx">
+      <DependentUpon>201810111439099_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810101856461_inserts.resx">
-      <DependentUpon>201810101856461_inserts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810101949579_AddMembershipType.resx">
-      <DependentUpon>201810101949579_AddMembershipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810101959366_AddColuna.resx">
-      <DependentUpon>201810101959366_AddColuna.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810111444375_inserts.resx">
+      <DependentUpon>201810111444375_inserts.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

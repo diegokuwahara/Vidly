@@ -11,12 +11,18 @@
     {
         <table class="table table-bordered table-hover">
             <thead>
-                <tr style="font-weight:bold"><th scope="col">Customer</th></tr>
+                <tr style="font-weight:bold">
+                    <th scope="col">Customer</th>
+                    <th scope="col">Membership Type</th>
+                </tr>
             </thead>
             <tbody>
                 @foreach (var customer in Model)
                 {
-                    <tr><td scope="col">@Html.ActionLink(@customer.Name, "Details", "Customers", new { Id = @customer.Id }, null)</td></tr>
+                <tr>
+                    <td scope="col">@Html.ActionLink(@customer.Name, "Details", "Customers", new { Id = @customer.Id }, null)</td>
+                    <td scope="col">@customer.MembershipType.Name</td>
+                </tr>
                 }
             </tbody>
         </table>
