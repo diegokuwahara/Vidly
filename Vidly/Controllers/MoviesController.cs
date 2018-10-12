@@ -70,10 +70,11 @@ namespace Vidly.Controllers
             movie.DateAdded = DateTime.Now;
             _context.Movies.Add(movie);
             _context.SaveChanges();
-            return View();
+
+            return RedirectToAction("Movies", "Movies");
         }
 
-        [Route("Movies/Details/{id:range(1,2)}")]
+        [Route("Movies/Details/{id}")]
         public ActionResult Details(int Id)
         {
             var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(c => c.Id == Id);
