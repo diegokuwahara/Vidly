@@ -15,6 +15,7 @@
                 <tr style="font-weight:bold">
                     <th scope="col">Customer</th>
                     <th scope="col">Membership Type</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,7 @@
                 <tr>
                     <td scope="col">@Html.ActionLink(@customer.Name, "Edit", "Customers", new { Id = @customer.Id }, null)</td>
                     <td scope="col">@customer.MembershipType.Name</td>
+                    <td scope="col">@Html.ActionLink("X", "Delete", "Customers", new { Id = @customer.Id }, new { @class = "btn btn-danger"})</td>
                 </tr>
                 }
             </tbody>

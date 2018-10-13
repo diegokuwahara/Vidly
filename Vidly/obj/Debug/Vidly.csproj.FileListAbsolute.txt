@@ -215,3 +215,5 @@ C:\Users\Kuwahara\Git Repo\Vidly\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 C:\Users\Kuwahara\Git Repo\Vidly\Vidly\obj\Debug\Vidly.dll
 C:\Users\Kuwahara\Git Repo\Vidly\Vidly\obj\Debug\Vidly.pdb
 C:\Users\Kuwahara\Git Repo\Vidly\Vidly\obj\Debug\Vidly.Migrations.correcaodechaves.resources
+C:\Users\Kuwahara\Git Repo\Vidly\Vidly\obj\Debug\Vidly.Migrations.validationforcustomername.resources
+C:\Users\Kuwahara\Git Repo\Vidly\Vidly\obj\Debug\Vidly.Migrations.free_membership.resources

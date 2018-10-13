@@ -59,6 +59,7 @@ namespace Vidly.Controllers
 
             var viewModel = new MovieFormViewModel
             {
+                Movie = new Movie(),
                 Genres = genres
             };
             return View("Form", viewModel);
@@ -78,8 +79,21 @@ namespace Vidly.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+            if(!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel
+                {
+                    Movie = movie,
+                    Genres = _context.Genres.ToList()
+                };
+
+                return View("Form", viewModel);
+                
+            }
+
             if (movie.Id == 0)
             {
                 movie.DateAdded = DateTime.Now;
@@ -99,7 +113,6 @@ namespace Vidly.Controllers
             return RedirectToAction("Movies", "Movies");
         }
         
-        [Route("Movies/Delete/{id}")]
         public ActionResult Delete(int Id)
         {
             var movieDel = _context.Movies.Single(m => m.Id == Id);

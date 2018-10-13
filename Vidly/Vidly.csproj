@@ -184,10 +184,19 @@
     <Compile Include="Migrations\201810120150208_correcao de chaves.Designer.cs">
       <DependentUpon>201810120150208_correcao de chaves.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810131635452_validation-for-customer-name.cs" />
+    <Compile Include="Migrations\201810131635452_validation-for-customer-name.Designer.cs">
+      <DependentUpon>201810131635452_validation-for-customer-name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810131817559_free_membership.cs" />
+    <Compile Include="Migrations\201810131817559_free_membership.Designer.cs">
+      <DependentUpon>201810131817559_free_membership.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfWholeYear.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
@@ -280,6 +289,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810120150208_correcao de chaves.resx">
       <DependentUpon>201810120150208_correcao de chaves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810131635452_validation-for-customer-name.resx">
+      <DependentUpon>201810131635452_validation-for-customer-name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810131817559_free_membership.resx">
+      <DependentUpon>201810131817559_free_membership.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
