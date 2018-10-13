@@ -15,6 +15,7 @@
                 <tr style="font-weight:bold">
                     <th scope="col">Movies</th>
                     <th scope="col">Genre</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,7 @@
                     <tr>
                         <td scope="col">@Html.ActionLink(movie.Name, "Edit", "Movies", new { Id = movie.Id }, null)</td>
                         <td scope="col">@movie.Genre.Name</td>
+                        <td scope="col">@Html.ActionLink("X","Delete","Movies", new { Id = movie.Id }, new { @class = "btn btn-danger" })</td>
                     </tr>
                 }
             </tbody>

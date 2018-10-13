@@ -98,6 +98,16 @@ namespace Vidly.Controllers
 
             return RedirectToAction("Movies", "Movies");
         }
+        
+        [Route("Movies/Delete/{id}")]
+        public ActionResult Delete(int Id)
+        {
+            var movieDel = _context.Movies.Single(m => m.Id == Id);
+            _context.Movies.Remove(movieDel);
+            _context.SaveChanges();
+
+            return RedirectToAction("Movies", "Movies");
+        }
 
         [Route("Movies/Details/{id}")]
         public ActionResult Details(int Id)
