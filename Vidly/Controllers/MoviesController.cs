@@ -65,9 +65,8 @@ namespace Vidly.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Movie movie)
+        public ActionResult Create(MovieFormViewModel viewModel)
         {
-            movie.DateAdded = DateTime.Now;
             _context.Movies.Add(movie);
             _context.SaveChanges();
             return View();
