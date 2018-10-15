@@ -24,6 +24,8 @@ namespace Vidly.DTO_s
         [Range(1, 20)]
         public int Stock { get; set; }
 
+        public virtual GenreDTO Genre { get; set; }
+
         [Display(Name = "Genre")]
         [Required(ErrorMessage = "Genre is required")]
         public int GenreId { get; set; }

@@ -22,6 +22,8 @@ namespace Vidly.DTO_s
         [Display(Name = "Membership Type")]
         public int MembershipTypeId { get; set; }
 
+        public virtual MembershipTypeDTO MembershipType { get; set; }
+
         //[Min18YearsIfWholeYear]
         public DateTime? Birthdate { get; set; }
     }
