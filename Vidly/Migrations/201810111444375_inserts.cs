@@ -14,11 +14,10 @@ namespace Vidly.Migrations
             Sql("INSERT INTO MembershipTypes(DiscountRate,DurationInMonths,Name,SignUpFee) VALUES (15, 6, 'Half Year', 60)");
             Sql("INSERT INTO MembershipTypes(DiscountRate,DurationInMonths,Name,SignUpFee) VALUES (30, 12, 'Whole Year', 100)");
 
-            Sql("INSERT INTO Customers(Name,isSubscribedToNewsLetter,MembershipType_Id) VALUES ('Zé da Vala' ,1,null)");
-            Sql("INSERT INTO Customers(Name,isSubscribedToNewsLetter,MembershipType_Id) VALUES ('Leo doido',1,null)");
+            Sql("INSERT INTO Customers(Name,isSubscribedToNewsLetter,MembershipType_Id) VALUES ('Zé da Vala' ,1,3)");
+            Sql("INSERT INTO Customers(Name,isSubscribedToNewsLetter,MembershipType_Id) VALUES ('Leo doido',1,1)");
             Sql("INSERT INTO Customers(Name,isSubscribedToNewsLetter,MembershipType_Id) VALUES ('Menino bom',0,1)");
             Sql("INSERT INTO Customers(Name,isSubscribedToNewsLetter,MembershipType_Id) VALUES ('Xapatim',0,2)");
-
         }
 
         public override void Down()

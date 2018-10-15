@@ -12,11 +12,11 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        private VidlYDbContext _context;
+        private VidlyDbContext _context;
 
         public MoviesController()
         {
-            _context = new VidlYDbContext();
+            _context = new VidlyDbContext();
         }
 
         // GET: Movies/Random
@@ -61,18 +61,71 @@ namespace Vidly.Controllers
             {
                 Genres = genres
             };
-            return View(viewModel);
+            return View("Form", viewModel);
+        }
+
+        public ActionResult Edit(int Id)
+        {
+            var genres = _context.Genres.ToList();
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == Id);
+
+            var viewModel = new MovieFormViewModel(movie)
+            {
+                Genres = genres
+            };
+            return View("Form", viewModel);
         }
 
         [HttpPost]
+<<<<<<< HEAD
         public ActionResult Create(MovieFormViewModel viewModel)
         {
             _context.Movies.Add(movie);
+=======
+        [ValidateAntiForgeryToken]
+        public ActionResult Save(Movie movie)
+        {
+            if(!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel(movie)
+                {
+                    Genres = _context.Genres.ToList()
+                };
+
+                return View("Form", viewModel);
+                
+            }
+
+            if (movie.Id == 0)
+            {
+                movie.DateAdded = DateTime.Now;
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieAtt = _context.Movies.Single(m => m.Id == movie.Id);
+                movieAtt.Name = movie.Name;
+                movieAtt.GenreId = movie.GenreId;
+                movieAtt.ReleaseDate = movie.ReleaseDate;
+                movieAtt.Stock = movie.Stock;
+            }
+            
+>>>>>>> 9a0c628dead1d34804023ca7d9d6812316811850
             _context.SaveChanges();
-            return View();
+
+            return RedirectToAction("Movies", "Movies");
+        }
+        
+        public ActionResult Delete(int Id)
+        {
+            var movieDel = _context.Movies.Single(m => m.Id == Id);
+            _context.Movies.Remove(movieDel);
+            _context.SaveChanges();
+
+            return RedirectToAction("Movies", "Movies");
         }
 
-        [Route("Movies/Details/{id:range(1,2)}")]
+        [Route("Movies/Details/{id}")]
         public ActionResult Details(int Id)
         {
             var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(c => c.Id == Id);

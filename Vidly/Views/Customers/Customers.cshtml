@@ -7,6 +7,7 @@
 
 <h2>Customers</h2>
 @{
+    @Html.ActionLink("New Customer", "New", "Customers", null, new { @class = "btn btn-primary"})
     if (Model.Any())
     {
         <table class="table table-bordered table-hover">
@@ -14,14 +15,16 @@
                 <tr style="font-weight:bold">
                     <th scope="col">Customer</th>
                     <th scope="col">Membership Type</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var customer in Model)
                 {
                 <tr>
-                    <td scope="col">@Html.ActionLink(@customer.Name, "Details", "Customers", new { Id = @customer.Id }, null)</td>
+                    <td scope="col">@Html.ActionLink(@customer.Name, "Edit", "Customers", new { Id = @customer.Id }, null)</td>
                     <td scope="col">@customer.MembershipType.Name</td>
+                    <td scope="col">@Html.ActionLink("X", "Delete", "Customers", new { Id = @customer.Id }, new { @class = "btn btn-danger"})</td>
                 </tr>
                 }
             </tbody>
