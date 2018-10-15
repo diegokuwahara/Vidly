@@ -217,3 +217,11 @@ C:\Users\Kuwahara\Git Repo\Vidly\Vidly\obj\Debug\Vidly.pdb
 C:\Users\Kuwahara\Git Repo\Vidly\Vidly\obj\Debug\Vidly.Migrations.correcaodechaves.resources
 C:\Users\Kuwahara\Git Repo\Vidly\Vidly\obj\Debug\Vidly.Migrations.validationforcustomername.resources
 C:\Users\Kuwahara\Git Repo\Vidly\Vidly\obj\Debug\Vidly.Migrations.free_membership.resources
+C:\Users\Kuwahara\Git Repo\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+C:\Users\Kuwahara\Git Repo\Vidly\Vidly\bin\System.Web.Http.dll
+C:\Users\Kuwahara\Git Repo\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+C:\Users\Kuwahara\Git Repo\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+C:\Users\Kuwahara\Git Repo\Vidly\Vidly\bin\System.Web.Http.xml
+C:\Users\Kuwahara\Git Repo\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
+C:\Users\Kuwahara\Git Repo\Vidly\Vidly\bin\AutoMapper.dll
+C:\Users\Kuwahara\Git Repo\Vidly\Vidly\bin\AutoMapper.xml

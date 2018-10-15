@@ -12,11 +12,11 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        private VidlYDbContext _context;
+        private VidlyDbContext _context;
 
         public MoviesController()
         {
-            _context = new VidlYDbContext();
+            _context = new VidlyDbContext();
         }
 
         // GET: Movies/Random
