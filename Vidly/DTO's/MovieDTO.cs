@@ -24,6 +24,9 @@ namespace Vidly.DTO_s
         [Range(1, 20)]
         public int Stock { get; set; }
 
+        [Range(1, 20)]
+        public int Available { get; set; }
+
         public virtual GenreDTO Genre { get; set; }
 
         [Display(Name = "Genre")]

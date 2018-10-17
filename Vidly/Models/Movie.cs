@@ -24,6 +24,9 @@ namespace Vidly.Models
         [Range(1,20)]
         public int Stock { get; set; }
 
+        [Range(0,20)]
+        public int Available { get; set; }
+
         public virtual Genre Genre { get; set; }
 
         [Display(Name = "Genre")]

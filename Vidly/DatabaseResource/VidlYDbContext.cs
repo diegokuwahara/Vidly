@@ -13,11 +13,17 @@ namespace Vidly.DatabaseResource
         public DbSet<Movie> Movies { get; set; }
         public DbSet<MembershipType> MembershipTypes { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
 
         public VidlyDbContext()
             : base("name=DefaultConnection")
         {
             
+        }
+
+        public static VidlyDbContext Create()
+        {
+            return new VidlyDbContext();
         }
     }
 }
