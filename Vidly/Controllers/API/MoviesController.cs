@@ -22,12 +22,20 @@ namespace Vidly.Controllers.API
             _context.Configuration.ProxyCreationEnabled = false;
         }
 
-        public IEnumerable<MovieDTO> GetMovies()
+        public IEnumerable<MovieDTO> GetMovies(string query = null)
         {
-            return _context.Movies
-                .Include(c => c.Genre)
+            var moviesQuery = _context.Movies
+               .Include(c => c.Genre)
+               .Where(m => m.Available > 0);
+                
+            if (!String.IsNullOrWhiteSpace(query))
+                moviesQuery = moviesQuery.Where(m => m.Name.Contains(query));
+
+             var movies = moviesQuery
                 .ToList()
-                .Select(Mapper.Map<Movie, MovieDTO>);
+                .Select(Mapper.Map < Movie, MovieDTO>);
+
+            return movies;
         }
 
         public IHttpActionResult GetMovie(int Id)
